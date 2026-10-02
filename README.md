@@ -16,6 +16,20 @@ The module uses a kernel return probe, so kernel-internal changes can break
 it. It has passed a fresh unplug/replug test but has **not** been tested
 across a host reboot. See [compatibility and limits](COMPATIBILITY.md).
 
+## Tested hardware
+
+The adapter used for development is a generic "AC1200 Dual Band USB Adapter"
+sold as driver-free. Its board is marked `WF05` (2.4 & 5 GHz, 1200M) and it
+carries a USB 3.0 Type-A plug. Identify your own unit by USB ID
+(`0a5c:bd27` / `0a5c:0bdc`), not by appearance: similar-looking adapters can
+use different chips.
+
+<p>
+  <img src="docs/images/adapter-exterior.jpg" alt="Adapter exterior: black USB 3.0 stick with two folding antennas" height="260">
+  <img src="docs/images/board-overview.jpg" alt="Opened adapter showing the WF05 board with two U.FL antenna leads" height="260">
+  <img src="docs/images/board-usb-connector.jpg" alt="Close-up of the WF05 module, SPI flash and USB 3.0 connector" height="260">
+</p>
+
 ## Install
 
 Follow the [DKMS installation guide](INSTALL.md). You need matching
